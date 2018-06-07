@@ -4,8 +4,7 @@ import pandas
 
 
 # # Let's use Amazon S3
-ACCESS_ID = "AKIAJL3Q6HSCIKQ55LQA"
-ACCESS_KEY = "57T8dh4BmDCGQ57EGbpAe0wpdM0FU40vvj+G1x6T"
+
 #dynamodb = boto3.resource('dynamodb',aws_access_key_id=ACCESS_ID,
 #         aws_secret_access_key=ACCESS_KEY, region_name='us-west-2')
 #dynamodb = boto3.client('dynamodb', region_name='us-west-2')
