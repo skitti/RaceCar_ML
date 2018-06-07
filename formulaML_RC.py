@@ -30,7 +30,7 @@ from sklearn.linear_model import ElasticNet
 from sklearn.preprocessing import MinMaxScaler, StandardScaler, Imputer
 
 from latlon_to_meter import *
-from sqlite import dataset_df, write_db
+#from sqlite import dataset_df, write_db
 from optimering import main_optimize
 from subdb import *
 
@@ -247,7 +247,7 @@ class Datamining:
 		self.df_seg = self.df_seg.loc[(self.df_seg['Dist_SensorMA'] > 5) & (self.df_seg['Dist_SensorMA'] < 25)]   #Filter out specific lenghts 
 		
 	def write_db (df_seg):
-		con = sqlite3.connect("tutorial.db")
+		con = sqlite3.connect("filtered.db")
 		df_seg.to_sql("carrides_filtered", con, if_exists='replace', index=False)
 		
 		variables = """IMU_GPSLongetude, IMU_GPSLatetude, Time,
